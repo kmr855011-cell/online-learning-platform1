@@ -47,11 +47,12 @@
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.50rem;
     margin-bottom: var(--spacing-xl);
     color: rgba(255, 255, 255, 0.95);
     font-weight: 400;
     line-height: 1.6;
+    text-shadow: 0 2px 9px rgba (0,0,0,0.2)
 }
 
 .hero-features {
