@@ -66,8 +66,8 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
-    background: #ffffff;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.14) 35%, rgba(124, 58, 237, 0.34) 74%);
+    background: #7C3AED;
+background: radial-gradient(circle, rgba(124, 58, 237, 1) 5%, rgba(177, 138, 245, 1) 50%, rgba(179, 140, 245, 1) 42%, rgba(255, 255, 255, 1) 100%);
     backdrop-filter: blur(10px);
     padding: var(--spacing-md);
     border-radius: var(--radius-lg);
@@ -78,6 +78,7 @@
 .feature:hover {
     background: rgba(255, 255, 255, 0.25);
     transform: translateX(-10px);
+    color:black;
 }
 
 .feature i {
