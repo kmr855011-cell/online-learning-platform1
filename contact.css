@@ -3,7 +3,8 @@
 /* Hero Section */
 .contact-hero {
     padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: #7C3AED;
+    background: linear-gradient(25deg, rgba(124, 58, 237, 1) 15%, rgba(255, 255, 255, 1) 64%);
     color: #ffffff;
     position: relative;
     overflow: hidden;
