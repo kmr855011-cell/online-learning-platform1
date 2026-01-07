@@ -51,6 +51,7 @@
     color: rgba(255, 255, 255, 0.95);
     font-weight: 400;
     line-height: 1.6;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-features {
@@ -92,13 +93,13 @@
 .feature h3 {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #ffffff;
+    color:black;
     margin-bottom: 0.25rem;
 }
 
 .feature p {
     font-size: 0.9375rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: black;
     margin: 0;
 }
 
