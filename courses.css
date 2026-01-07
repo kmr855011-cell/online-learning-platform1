@@ -11,12 +11,12 @@
 .courses-title {
     font-size: 3rem;
     margin-bottom: var(--spacing-sm);
-    color: var(--text-primary);
+    color: black;
 }
 
 .courses-subtitle {
     font-size: 1.25rem;
-    color: var(--text-secondary);
+    color: black;
     margin-bottom: var(--spacing-xl);
     max-width: 600px;
     margin-left: auto;
