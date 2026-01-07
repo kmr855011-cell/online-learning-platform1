@@ -6,17 +6,18 @@
     <title>اتصل بنا - منصة النجاح التعليمية</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- شريط التنقل -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <span class="logo-icon">🎯</span>
+                <i class="fas fa-graduation-cap logo-icon"></i>
                 <span class="logo-text">منصة النجاح</span>
             </a>
             
@@ -31,216 +32,361 @@
                 <li><a href="Courses.html" class="nav-link">الكورسات</a></li>
                 <li><a href="about.html" class="nav-link">عن المنصة</a></li>
                 <li><a href="contact.html" class="nav-link active">اتصل بنا</a></li>
-                <li><a href="#" class="btn btn-primary nav-cta">سجل الآن</a></li>
+                <li><a href="dashboard.html" class="nav-link">لوحة التحكم</a></li>
+                <li><a href="#register" class="btn btn-primary nav-cta">سجل الآن</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Contact Header -->
-    <section class="contact-header">
+    <!-- Hero Section -->
+    <section class="contact-hero">
         <div class="container">
-            <div class="contact-header-content">
-                <h1 class="contact-title">اتصل بنا</h1>
-                <p class="contact-subtitle">
-                    نحن هنا لمساعدتك! تواصل معنا لأي استفسار أو دعم فني
-                </p>
+            <div class="hero-content">
+                <h1 class="hero-title">تواصل مع فريقنا</h1>
+                <p class="hero-subtitle">نحن هنا للإجابة على جميع استفساراتك ومساعدتك في رحلتك التعليمية</p>
+                
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-headset"></i>
+                        <div>
+                            <h3>دعم فني 24/7</h3>
+                            <p>متاحون لمساعدتك على مدار الساعة</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>رد سريع</h3>
+                            <p>نرد خلال 24 ساعة عمل</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h3>خصوصية تامة</h3>
+                            <p>بياناتك محمية ومشفرة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="contact-illustration">
+                    <div class="illustration-element">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="illustration-element">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="illustration-element">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Main Content -->
-    <main class="contact-main">
+    <!-- Contact Methods Section -->
+    <section class="contact-methods">
         <div class="container">
-            <div class="contact-grid">
-                <!-- Contact Form -->
-                <div class="contact-form-section">
-                    <h2 class="section-title">أرسل رسالتك</h2>
-                    <p class="section-subtitle">سنرد عليك في خلال 24 ساعة عمل</p>
-                    
-                    <form id="contactForm" class="contact-form" novalidate>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name" class="form-label">الاسم الكامل *</label>
-                                <input type="text" id="name" name="name" class="form-control" required>
-                                <div class="error-message" id="nameError"></div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email" class="form-label">البريد الإلكتروني *</label>
-                                <input type="email" id="email" name="email" class="form-control" required>
-                                <div class="error-message" id="emailError"></div>
-                            </div>
+            <div class="section-header">
+                <h2 class="section-title">طرق التواصل</h2>
+                <p class="section-subtitle">اختر الطريقة المناسبة للتواصل معنا</p>
+            </div>
+            
+            <div class="methods-grid">
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>البريد الإلكتروني</h3>
+                    <p>أرسل رسالتك وسنرد عليك في أقرب وقت</p>
+                    <div class="method-contacts">
+                        <a href="mailto:info@alnajah.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            info@alnajah.com
+                        </a>
+                        <a href="mailto:support@alnajah.com" class="contact-link">
+                            <i class="fas fa-life-ring"></i>
+                            support@alnajah.com
+                        </a>
+                    </div>
+                    <button class="btn btn-outline" onclick="scrollToSection('contact-form')">
+                        <i class="fas fa-paper-plane"></i>
+                        أرسل رسالة
+                    </button>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>الهاتف</h3>
+                    <p>اتصل بنا خلال أوقات العمل الرسمية</p>
+                    <div class="method-contacts">
+                        <a href="tel:+201234567890" class="contact-link">
+                            <i class="fas fa-phone"></i>
+                            +20 123 456 7890
+                        </a>
+                        <a href="tel:+201098765432" class="contact-link">
+                            <i class="fas fa-mobile-alt"></i>
+                            +20 109 876 5432
+                        </a>
+                    </div>
+                    <div class="work-hours">
+                        <i class="fas fa-clock"></i>
+                        <span>الأحد - الخميس: 9 صباحاً - 5 مساءً</span>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>المقر الرئيسي</h3>
+                    <p>زورنا في مقرنا الرئيسي بالقاهرة</p>
+                    <div class="method-contacts">
+                        <div class="contact-link">
+                            <i class="fas fa-map-pin"></i>
+                            شارع جامعة القاهرة، الجيزة، مصر
+                        </div>
+                    </div>
+                    <div class="visit-info">
+                        <p><i class="fas fa-car"></i> مواقف سيارات مجانية</p>
+                        <p><i class="fas fa-wheelchair"></i> سهولة الوصول</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section" id="contact-form">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2 class="form-title">أرسل رسالتك</h2>
+                    <p class="form-subtitle">سنرد عليك في خلال 24 ساعة عمل</p>
+                </div>
+                
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName" class="form-label">
+                                <i class="fas fa-user"></i>
+                                الاسم الكامل *
+                            </label>
+                            <input type="text" id="fullName" name="fullName" class="form-control" required>
+                            <div class="error-message" id="nameError"></div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="phone" class="form-label">رقم الهاتف</label>
+                            <label for="email" class="form-label">
+                                <i class="fas fa-envelope"></i>
+                                البريد الإلكتروني *
+                            </label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">
+                                <i class="fas fa-phone"></i>
+                                رقم الهاتف
+                            </label>
                             <input type="tel" id="phone" name="phone" class="form-control">
                             <div class="error-message" id="phoneError"></div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="subject" class="form-label">الموضوع *</label>
+                            <label for="subject" class="form-label">
+                                <i class="fas fa-tag"></i>
+                                الموضوع *
+                            </label>
                             <select id="subject" name="subject" class="form-control" required>
                                 <option value="">اختر الموضوع</option>
-                                <option value="technical">دعم فني</option>
-                                <option value="courses">استفسار عن كورسات</option>
-                                <option value="payment">استفسار عن الدفع</option>
+                                <option value="technical-support">دعم فني</option>
+                                <option value="course-inquiry">استفسار عن كورس</option>
+                                <option value="payment-issue">مشكلة في الدفع</option>
+                                <option value="account-support">دعم حساب</option>
+                                <option value="partnership">شراكة تعاونية</option>
                                 <option value="other">موضوع آخر</option>
                             </select>
                             <div class="error-message" id="subjectError"></div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">الرسالة *</label>
-                            <textarea id="message" name="message" class="form-control form-textarea" rows="5" required></textarea>
-                            <div class="error-message" id="messageError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">
+                            <i class="fas fa-comment-alt"></i>
+                            الرسالة *
+                        </label>
+                        <textarea id="message" name="message" class="form-control form-textarea" rows="6" required placeholder="اكتب رسالتك هنا..."></textarea>
+                        <div class="error-message" id="messageError"></div>
+                        <div class="char-count">
+                            <span id="charCount">0</span> / 1000 حرف
                         </div>
-                        
-                        <div class="form-group">
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="newsletter" name="newsletter" checked>
-                                <label for="newsletter" class="checkbox-label">
-                                    أرغب في استلام النشرة الإخبارية والعروض الخاصة
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-large">
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter" class="checkbox-label">
+                            أرغب في استلام النشرة الإخبارية والعروض الخاصة على بريدي الإلكتروني
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large submit-btn">
+                            <i class="fas fa-paper-plane"></i>
                             <span class="btn-text">إرسال الرسالة</span>
-                            <span class="btn-loading" style="display: none;">⏳</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                جاري الإرسال...
+                            </span>
                         </button>
-                    </form>
-                </div>
+                    </div>
+                </form>
                 
-                <!-- Contact Info -->
-                <div class="contact-info-section">
-                    <h2 class="section-title">معلومات التواصل</h2>
-                    
-                    <div class="contact-info-card">
-                        <div class="contact-info-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-info-content">
-                                <h3>العنوان</h3>
-                                <p>شارع جامعة القاهرة، الدور الخامس<br>الجيزة، مصر</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-info-item">
-                            <div class="contact-icon">📧</div>
-                            <div class="contact-info-content">
-                                <h3>البريد الإلكتروني</h3>
-                                <p>
-                                    <a href="mailto:info@alnajah.com">info@alnajah.com</a><br>
-                                    <a href="mailto:support@alnajah.com">support@alnajah.com</a>
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-info-item">
-                            <div class="contact-icon">📞</div>
-                            <div class="contact-info-content">
-                                <h3>الهاتف</h3>
-                                <p>
-                                    <a href="tel:+201234567890">+20 123 456 7890</a><br>
-                                    <a href="tel:+201098765432">+20 109 876 5432</a>
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-info-item">
-                            <div class="contact-icon">🕒</div>
-                            <div class="contact-info-content">
-                                <h3>أوقات العمل</h3>
-                                <p>
-                                    الأحد - الخميس: 9 صباحاً - 5 مساءً<br>
-                                    الجمعة والسبت: إجازة
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Social Media -->
-                    <div class="social-media-section">
-                        <h3>تابعنا على وسائل التواصل</h3>
-                        <div class="social-links">
-                            <a href="#" class="social-link facebook" aria-label="فيسبوك">
-                                <span>f</span>
-                            </a>
-                            <a href="#" class="social-link twitter" aria-label="تويتر">
-                                <span>𝕏</span>
-                            </a>
-                            <a href="#" class="social-link instagram" aria-label="انستجرام">
-                                <span>📷</span>
-                            </a>
-                            <a href="#" class="social-link youtube" aria-label="يوتيوب">
-                                <span>▶️</span>
-                            </a>
-                            <a href="#" class="social-link linkedin" aria-label="لينكدإن">
-                                <span>in</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Quick Links -->
-                    <div class="faq-quick-links">
-                        <h3>أسئلة متكررة</h3>
-                        <div class="faq-links">
-                            <a href="#faq1" class="faq-link">كيف يمكنني التسجيل في الكورسات؟</a>
-                            <a href="#faq2" class="faq-link">ماهي وسائل الدفع المتاحة؟</a>
-                            <a href="#faq3" class="faq-link">هل يمكنني الحصول على نسخة تجريبية؟</a>
-                            <a href="#faq4" class="faq-link">كيف يمكنني متابعة تقدمي الدراسي؟</a>
-                        </div>
+                <div class="form-success" id="formSuccess" style="display: none;">
+                    <div class="success-content">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>تم إرسال رسالتك بنجاح!</h3>
+                        <p>شكراً لتواصلك معنا. سنرد على رسالتك في أقرب وقت ممكن.</p>
+                        <button class="btn btn-outline" id="sendAnotherBtn">
+                            <i class="fas fa-plus"></i>
+                            إرسال رسالة أخرى
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration-section" id="register">
+        <div class="container">
+            <div class="registration-container">
+                <div class="registration-content">
+                    <h2 class="registration-title">ابدأ رحلتك التعليمية الآن</h2>
+                    <p class="registration-subtitle">سجل مجاناً واحصل على أسبوع تجريبي من جميع الكورسات</p>
+                    
+                    <div class="registration-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>وصول مجاني لأسبوع كامل</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>دعم فني متواصل</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>شهادة معتمدة بعد الإكمال</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="registration-form">
+                    <h3>إنشاء حساب جديد</h3>
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="الاسم الكامل" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="البريد الإلكتروني" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="كلمة المرور" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="رقم الهاتف" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-user-plus"></i>
+                            سجل مجاناً الآن
+                        </button>
+                        <p class="terms-notice">
+                            بالتسجيل فإنك توافق على <a href="#">شروط الاستخدام</a> و <a href="#">سياسة الخصوصية</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
-            <h2 class="section-title text-center">أسئلة شائعة</h2>
+            <div class="section-header">
+                <h2 class="section-title">أسئلة شائعة</h2>
+                <p class="section-subtitle">إجابات على الأسئلة الأكثر شيوعاً حول التواصل والتسجيل</p>
+            </div>
             
             <div class="faq-container">
-                <div class="faq-item" id="faq1">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>كيف يمكنني التسجيل في الكورسات؟</span>
-                        <span class="faq-icon">+</span>
-                    </button>
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <h3>كم تستغرق مدة الرد على الاستفسارات؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                     <div class="faq-answer">
-                        <p>يمكنك التسجيل عن طريق إنشاء حساب في المنصة، ثم اختيار الكورس المناسب والضغط على زر "اشترك الآن". ستتمكن من الدفع عبر بطاقات الائتمان أو التحويل البنكي أو محافظ الدفع الإلكترونية.</p>
+                        <p>نهدف للرد على جميع الاستفسارات خلال 24 ساعة عمل. في حالة الطوارئ أو المشاكل الفنية، يمكنك الاتصال بنا على الرقم المباشر للدعم الفني.</p>
                     </div>
                 </div>
                 
-                <div class="faq-item" id="faq2">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>ماهي وسائل الدفع المتاحة؟</span>
-                        <span class="faq-icon">+</span>
-                    </button>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل يوجد دعم فني في العطلات الأسبوعية؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                     <div class="faq-answer">
-                        <p>نحن نقدم عدة وسائل دفع آمنة تشمل: بطاقات الائتمان (فيزا، ماستركارد)، التحويل البنكي، فوري، وحسابات الدفع الإلكترونية. جميع عمليات الدفع مشفرة وآمنة بنسبة 100%.</p>
+                        <p>نعم، فريق الدعم الفني يعمل على مدار الساعة طوال أيام الأسبوع، بما في ذلك العطلات الأسبوعية والأعياد.</p>
                     </div>
                 </div>
                 
-                <div class="faq-item" id="faq3">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>هل يمكنني الحصول على نسخة تجريبية؟</span>
-                        <span class="faq-icon">+</span>
-                    </button>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>كيف يمكنني استرداد المبلغ إذا لم أكن راضياً عن الخدمة؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                     <div class="faq-answer">
-                        <p>نعم، نقدم نسخة تجريبية مجانية لمدة 7 أيام لأي كورس. يمكنك تجربة أول محاضرتين من أي كورس مجاناً قبل الاشتراك.</p>
+                        <p>يمكنك طلب استرداد المبلغ خلال 14 يوماً من تاريخ الشراء عن طريق التواصل مع فريق الدعم عبر البريد الإلكتروني أو الهاتف.</p>
                     </div>
                 </div>
                 
-                <div class="faq-item" id="faq4">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>كيف يمكنني متابعة تقدمي الدراسي؟</span>
-                        <span class="faq-icon">+</span>
-                    </button>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل تقدمون خصومات للطلاب؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                     <div class="faq-answer">
-                        <p>توفر المنصة لوحة تحكم متكاملة تمكنك من متابعة تقدمك في كل كورس، مشاهدة الإحصائيات، تحميل الشهادات، والاطلاع على التقارير التفصيلية لأدائك.</p>
+                        <p>نعم، نقدم خصومات خاصة للطلاب تصل إلى 40% على بعض الكورسات. يمكنك التواصل معنا للحصول على عرض خاص.</p>
                     </div>
                 </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>كيف يمكنني تحديث بياناتي الشخصية؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكنك تحديث بياناتك من خلال لوحة التحكم في حسابك، أو التواصل مع فريق الدعم للمساعدة في تحديث المعلومات.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>هل يوجد تطبيق للهاتف المحمول؟</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نعم، لدينا تطبيق متاح لكل من أندرويد وآيفون. يمكنك تحميله من متجر التطبيقات أو طلب الرابط من فريق الدعم.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-cta">
+                <p>لم تجد إجابة لسؤالك؟ <a href="#contact-form">تواصل معنا مباشرة</a></p>
             </div>
         </div>
     </section>
@@ -248,14 +394,49 @@
     <!-- Map Section -->
     <section class="map-section">
         <div class="container">
-            <h2 class="section-title text-center">موقعنا</h2>
-            <div class="map-placeholder">
-                <div class="map-content">
-                    <div class="map-marker">
-                        <div class="marker-pin"></div>
-                        <div class="marker-info">
-                            <h4>مقر منصة النجاح</h4>
-                            <p>شارع جامعة القاهرة، الجيزة</p>
+            <div class="section-header">
+                <h2 class="section-title">موقعنا على الخريطة</h2>
+                <p class="section-subtitle">زورنا في مقرنا الرئيسي أو تواصل معنا لأي استفسار</p>
+            </div>
+            
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-overlay">
+                        <div class="map-marker">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="map-info">
+                            <h3>مقر منصة النجاح</h3>
+                            <p><i class="fas fa-map-pin"></i> شارع جامعة القاهرة، الجيزة</p>
+                            <p><i class="fas fa-clock"></i> الأحد - الخميس: 9 ص - 5 م</p>
+                            <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-directions">
+                    <h3>كيف تصل إلينا؟</h3>
+                    <div class="directions-list">
+                        <div class="direction">
+                            <i class="fas fa-bus"></i>
+                            <div>
+                                <h4>بالأتوبيس</h4>
+                                <p>خطوط: 300، 355، 400 - محطة جامعة القاهرة</p>
+                            </div>
+                        </div>
+                        <div class="direction">
+                            <i class="fas fa-subway"></i>
+                            <div>
+                                <h4>بالمترو</h4>
+                                <p>خط الجامعة - محطة الجيزة</p>
+                            </div>
+                        </div>
+                        <div class="direction">
+                            <i class="fas fa-car"></i>
+                            <div>
+                                <h4>بالسيارة</h4>
+                                <p>مواقف سيارات مجانية داخل المبنى</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -263,14 +444,80 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- Social Media Section -->
+    <section class="social-section">
         <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">هل تحتاج إلى مساعدة فورية؟</h2>
-                <p class="cta-subtitle">اتصل بفريق الدعم على الرقم التالي:</p>
-                <a href="tel:+201234567890" class="cta-phone">+20 123 456 7890</a>
-                <p class="cta-note">متاح من الأحد إلى الخميس، من 9 صباحاً حتى 5 مساءً</p>
+            <div class="section-header">
+                <h2 class="section-title">تابعنا على وسائل التواصل</h2>
+                <p class="section-subtitle">كن أول من يعرف عن عروضنا الجديدة وأخبارنا</p>
+            </div>
+            
+            <div class="social-grid">
+                <a href="#" class="social-card facebook">
+                    <div class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="social-content">
+                        <h3>فيسبوك</h3>
+                        <p>تابع آخر الأخبار والعروض</p>
+                        <span class="social-link">@alnajahplatform</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="social-card twitter">
+                    <div class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="social-content">
+                        <h3>تويتر</h3>
+                        <p>تفاعل مع مجتمعنا التعليمي</p>
+                        <span class="social-link">@alnajah_edu</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="social-card instagram">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="social-content">
+                        <h3>انستجرام</h3>
+                        <p>شاهد محتوى تعليمي مرئي</p>
+                        <span class="social-link">@alnajah_platform</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="social-card youtube">
+                    <div class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="social-content">
+                        <h3>يوتيوب</h3>
+                        <p>دروس مجانية وعروض حية</p>
+                        <span class="social-link">منصة النجاح التعليمية</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="social-card linkedin">
+                    <div class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="social-content">
+                        <h3>لينكدإن</h3>
+                        <p>انضم إلى شبكتنا المهنية</p>
+                        <span class="social-link">منصة النجاح التعليمية</span>
+                    </div>
+                </a>
+                
+                <a href="#" class="social-card whatsapp">
+                    <div class="social-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="social-content">
+                        <h3>واتساب</h3>
+                        <p>دعم فني مباشر وسريع</p>
+                        <span class="social-link">+20 123 456 7890</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -281,12 +528,18 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="index.html" class="logo">
-                        <span class="logo-icon">🎯</span>
+                        <i class="fas fa-graduation-cap logo-icon"></i>
                         <span class="logo-text">منصة النجاح</span>
                     </a>
                     <p class="footer-description">
                         منصة تعليمية متكاملة لطلاب الثانوية، نقدم حلولاً تعليمية مبتكرة لتحقيق النجاح الأكاديمي
                     </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="انستجرام"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
                 
                 <div class="footer-col">
@@ -296,36 +549,93 @@
                         <li><a href="courses.html">الكورسات</a></li>
                         <li><a href="about.html">عن المنصة</a></li>
                         <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="dashboard.html">لوحة التحكم</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3 class="footer-title">الكورسات</h3>
+                    <h3 class="footer-title">التصنيفات</h3>
                     <ul class="footer-links">
-                        <li><a href="courses.html?filter=math">الرياضيات</a></li>
-                        <li><a href="courses.html?filter=physics">الفيزياء</a></li>
-                        <li><a href="courses.html?filter=chemistry">الكيمياء</a></li>
-                        <li><a href="courses.html?filter=biology">الأحياء</a></li>
+                        <li><a href="courses.html">الرياضيات</a></li>
+                        <li><a href="courses.html">الفيزياء</a></li>
+                        <li><a href="courses.html">الكيمياء</a></li>
+                        <li><a href="courses.html">الأحياء</a></li>
+                        <li><a href="courses.html">اللغة العربية</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3 class="footer-title">تواصل معنا</h3>
                     <ul class="footer-contact">
-                        <li>📧 info@alnajah.com</li>
-                        <li>📞 01234567890</li>
-                        <li>📍 القاهرة، مصر</li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@alnajah.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>01234567890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>القاهرة، مصر</span>
+                        </li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
                 <p class="copyright">© <span id="currentYear">2024</span> منصة النجاح. جميع الحقوق محفوظة.</p>
+                <div class="footer-links-bottom">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                    <a href="#">سياسة الاسترداد</a>
+                    <a href="#">الأسئلة الشائعة</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Quick Contact Widget -->
+    <div class="quick-contact" id="quickContact">
+        <button class="quick-toggle" id="quickToggle">
+            <i class="fas fa-comments"></i>
+            <span class="notification-badge">3</span>
+        </button>
+        
+        <div class="quick-panel" id="quickPanel">
+            <div class="quick-header">
+                <h3>مركز المساعدة السريع</h3>
+                <button class="quick-close" id="quickClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="quick-content">
+                <div class="quick-options">
+                    <a href="tel:+201234567890" class="quick-option">
+                        <i class="fas fa-phone"></i>
+                        <span>اتصل بنا الآن</span>
+                    </a>
+                    <a href="mailto:support@alnajah.com" class="quick-option">
+                        <i class="fas fa-envelope"></i>
+                        <span>أرسل بريد إلكتروني</span>
+                    </a>
+                    <a href="#faq-section" class="quick-option">
+                        <i class="fas fa-question-circle"></i>
+                        <span>الأسئلة الشائعة</span>
+                    </a>
+                </div>
+                
+                <div class="quick-form">
+                    <h4>أرسل استفسارك</h4>
+                    <textarea placeholder="اكتب استفسارك هنا..." rows="3"></textarea>
+                    <button class="btn btn-primary btn-small">إرسال</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="navigation.js"></script>
     <script src="contact.js"></script>
 </body>
-</html>
+    </html>
