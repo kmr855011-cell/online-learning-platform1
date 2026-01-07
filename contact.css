@@ -51,7 +51,6 @@
     color: rgba(255, 255, 255, 0.95);
     font-weight: 400;
     line-height: 1.6;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-features {
@@ -65,7 +64,8 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
-    background: rgba(255, 255, 255, 0.15);
+    background: #ffffff;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.14) 35%, rgba(124, 58, 237, 0.34) 74%);
     backdrop-filter: blur(10px);
     padding: var(--spacing-md);
     border-radius: var(--radius-lg);
@@ -93,13 +93,13 @@
 .feature h3 {
     font-size: 1.25rem;
     font-weight: 700;
-    color:black;
+    color: #ffffff;
     margin-bottom: 0.25rem;
 }
 
 .feature p {
     font-size: 0.9375rem;
-    color: black;
+    color: rgba(255, 255, 255, 0.9);
     margin: 0;
 }
 
