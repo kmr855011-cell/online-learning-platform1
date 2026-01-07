@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الكورسات - منصة النجاح التعليمية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎯</span>
+                <span class="logo-text">منصة النجاح</span>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="فتح/إغلاق القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                <li><a href="courses.html" class="nav-link active">الكورسات</a></li>
+                <li><a href="about.html" class="nav-link">عن المنصة</a></li>
+                <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                <li><a href="#" class="btn btn-primary nav-cta">سجل الآن</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Courses Header -->
+    <section class="courses-header">
+        <div class="container">
+            <div class="courses-header-content">
+                <h1 class="courses-title">الكورسات التعليمية</h1>
+                <p class="courses-subtitle">
+                    اختر من مجموعة متنوعة من الكورسات المصممة خصيصًا لطلاب الثانوية
+                </p>
+                
+                <!-- Search and Filter -->
+                <div class="courses-controls">
+                    <div class="search-box">
+                        <input type="text" id="courseSearch" placeholder="ابحث عن كورس..." class="search-input">
+                        <button class="search-btn" aria-label="بحث">
+                            <span>🔍</span>
+                        </button>
+                    </div>
+                    
+                    <div class="filter-dropdown">
+                        <select id="courseFilter" class="filter-select">
+                            <option value="all">جميع التخصصات</option>
+                            <option value="math">الرياضيات</option>
+                            <option value="physics">الفيزياء</option>
+                            <option value="chemistry">الكيمياء</option>
+                            <option value="biology">الأحياء</option>
+                            <option value="arabic">العربية</option>
+                            <option value="english">الإنجليزية</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Main Content -->
+    <main class="courses-main">
+        <div class="container">
+            <!-- Courses Statistics -->
+            <div class="courses-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalCourses">24</div>
+                    <div class="stat-label">كورس متاح</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalHours">480+</div>
+                    <div class="stat-label">ساعة تعليمية</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalStudents">5,200+</div>
+                    <div class="stat-label">طالب مسجل</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="successRate">98%</div>
+                    <div class="stat-label">نسبة النجاح</div>
+                </div>
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="courses-container">
+                <div class="courses-grid" id="coursesGrid">
+                    <!-- Courses will be loaded dynamically -->
+                </div>
+                
+                <!-- Loading Indicator -->
+                <div class="loading-indicator" id="loadingIndicator">
+                    <div class="spinner"></div>
+                    <p>جاري تحميل الكورسات...</p>
+                </div>
+                
+                <!-- No Results Message -->
+                <div class="no-results" id="noResults" style="display: none;">
+                    <p>❌ لم يتم العثور على كورسات تطابق بحثك</p>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be generated dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title text-center">أسئلة شائعة</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>كيف يمكنني الاشتراك في الكورسات؟</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>يمكنك الاشتراك عن طريق التسجيل في الموقع ثم اختيار الكورس المناسب والضغط على زر "اشترك الآن". يمكنك الدفع عبر البطاقات الإلكترونية أو التحويل البنكي.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>هل يمكنني الوصول للكورسات على الهاتف؟</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، جميع الكورسات متاحة عبر تطبيق الهاتف والموقع الإلكتروني، ويمكنك المذاكرة في أي وقت ومن أي مكان.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>ماذا لو لم يعجبني الكورس؟</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نوفر ضمان استرداد الأموال خلال 7 أيام إذا لم تكن راضيًا عن الكورس لأي سبب.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>هل هناك شهادة معتمدة بعد الانتهاء؟</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، تحصل على شهادة إلكترونية معتمدة من المنصة بعد إكمال كل كورس بنجاح.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">جاهز لبدء رحلتك التعليمية؟</h2>
+                <p class="cta-subtitle">سجل الآن واحصل على أسبوع مجاني من جميع الكورسات</p>
+                <a href="#" class="btn btn-primary btn-large">سجل مجاناً الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🎯</span>
+                        <span class="logo-text">منصة النجاح</span>
+                    </a>
+                    <p class="footer-description">
+                        منصة تعليمية متكاملة لطلاب الثانوية، نقدم حلولاً تعليمية مبتكرة لتحقيق النجاح الأكاديمي
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="courses.html">الكورسات</a></li>
+                        <li><a href="about.html">عن المنصة</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">الكورسات</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-filter="math">الرياضيات</a></li>
+                        <li><a href="#" data-filter="physics">الفيزياء</a></li>
+                        <li><a href="#" data-filter="chemistry">الكيمياء</a></li>
+                        <li><a href="#" data-filter="biology">الأحياء</a></li>
+                        <li><a href="#" data-filter="arabic">العربية</a></li>
+                        <li><a href="#" data-filter="english">الإنجليزية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">تواصل معنا</h3>
+                    <ul class="footer-contact">
+                        <li>📧 info@alnajah.com</li>
+                        <li>📞 01234567890</li>
+                        <li>📍 القاهرة، مصر</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© <span id="currentYear">2024</span> منصة النجاح. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Course Modal -->
+    <div class="modal" id="courseModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Course details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script src="courses.js"></script>
+</body>
+</html>

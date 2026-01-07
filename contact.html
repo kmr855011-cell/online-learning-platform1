@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - منصة النجاح التعليمية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎯</span>
+                <span class="logo-text">منصة النجاح</span>
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="فتح/إغلاق القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                <li><a href="courses.html" class="nav-link">الكورسات</a></li>
+                <li><a href="about.html" class="nav-link">عن المنصة</a></li>
+                <li><a href="contact.html" class="nav-link active">اتصل بنا</a></li>
+                <li><a href="#" class="btn btn-primary nav-cta">سجل الآن</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="contact-header">
+        <div class="container">
+            <div class="contact-header-content">
+                <h1 class="contact-title">اتصل بنا</h1>
+                <p class="contact-subtitle">
+                    نحن هنا لمساعدتك! تواصل معنا لأي استفسار أو دعم فني
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Main Content -->
+    <main class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2 class="section-title">أرسل رسالتك</h2>
+                    <p class="section-subtitle">سنرد عليك في خلال 24 ساعة عمل</p>
+                    
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" class="form-label">الاسم الكامل *</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                                <div class="error-message" id="nameError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">البريد الإلكتروني *</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
+                            <div class="error-message" id="phoneError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">الموضوع *</label>
+                            <select id="subject" name="subject" class="form-control" required>
+                                <option value="">اختر الموضوع</option>
+                                <option value="technical">دعم فني</option>
+                                <option value="courses">استفسار عن كورسات</option>
+                                <option value="payment">استفسار عن الدفع</option>
+                                <option value="other">موضوع آخر</option>
+                            </select>
+                            <div class="error-message" id="subjectError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">الرسالة *</label>
+                            <textarea id="message" name="message" class="form-control form-textarea" rows="5" required></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                <label for="newsletter" class="checkbox-label">
+                                    أرغب في استلام النشرة الإخبارية والعروض الخاصة
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <span class="btn-text">إرسال الرسالة</span>
+                            <span class="btn-loading" style="display: none;">⏳</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info-section">
+                    <h2 class="section-title">معلومات التواصل</h2>
+                    
+                    <div class="contact-info-card">
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-info-content">
+                                <h3>العنوان</h3>
+                                <p>شارع جامعة القاهرة، الدور الخامس<br>الجيزة، مصر</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-info-content">
+                                <h3>البريد الإلكتروني</h3>
+                                <p>
+                                    <a href="mailto:info@alnajah.com">info@alnajah.com</a><br>
+                                    <a href="mailto:support@alnajah.com">support@alnajah.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-info-content">
+                                <h3>الهاتف</h3>
+                                <p>
+                                    <a href="tel:+201234567890">+20 123 456 7890</a><br>
+                                    <a href="tel:+201098765432">+20 109 876 5432</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-info-content">
+                                <h3>أوقات العمل</h3>
+                                <p>
+                                    الأحد - الخميس: 9 صباحاً - 5 مساءً<br>
+                                    الجمعة والسبت: إجازة
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="social-media-section">
+                        <h3>تابعنا على وسائل التواصل</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link facebook" aria-label="فيسبوك">
+                                <span>f</span>
+                            </a>
+                            <a href="#" class="social-link twitter" aria-label="تويتر">
+                                <span>𝕏</span>
+                            </a>
+                            <a href="#" class="social-link instagram" aria-label="انستجرام">
+                                <span>📷</span>
+                            </a>
+                            <a href="#" class="social-link youtube" aria-label="يوتيوب">
+                                <span>▶️</span>
+                            </a>
+                            <a href="#" class="social-link linkedin" aria-label="لينكدإن">
+                                <span>in</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Quick Links -->
+                    <div class="faq-quick-links">
+                        <h3>أسئلة متكررة</h3>
+                        <div class="faq-links">
+                            <a href="#faq1" class="faq-link">كيف يمكنني التسجيل في الكورسات؟</a>
+                            <a href="#faq2" class="faq-link">ماهي وسائل الدفع المتاحة؟</a>
+                            <a href="#faq3" class="faq-link">هل يمكنني الحصول على نسخة تجريبية؟</a>
+                            <a href="#faq4" class="faq-link">كيف يمكنني متابعة تقدمي الدراسي؟</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title text-center">أسئلة شائعة</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item" id="faq1">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>كيف يمكنني التسجيل في الكورسات؟</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>يمكنك التسجيل عن طريق إنشاء حساب في المنصة، ثم اختيار الكورس المناسب والضغط على زر "اشترك الآن". ستتمكن من الدفع عبر بطاقات الائتمان أو التحويل البنكي أو محافظ الدفع الإلكترونية.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" id="faq2">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>ماهي وسائل الدفع المتاحة؟</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نحن نقدم عدة وسائل دفع آمنة تشمل: بطاقات الائتمان (فيزا، ماستركارد)، التحويل البنكي، فوري، وحسابات الدفع الإلكترونية. جميع عمليات الدفع مشفرة وآمنة بنسبة 100%.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" id="faq3">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>هل يمكنني الحصول على نسخة تجريبية؟</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نعم، نقدم نسخة تجريبية مجانية لمدة 7 أيام لأي كورس. يمكنك تجربة أول محاضرتين من أي كورس مجاناً قبل الاشتراك.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" id="faq4">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>كيف يمكنني متابعة تقدمي الدراسي؟</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>توفر المنصة لوحة تحكم متكاملة تمكنك من متابعة تقدمك في كل كورس، مشاهدة الإحصائيات، تحميل الشهادات، والاطلاع على التقارير التفصيلية لأدائك.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title text-center">موقعنا</h2>
+            <div class="map-placeholder">
+                <div class="map-content">
+                    <div class="map-marker">
+                        <div class="marker-pin"></div>
+                        <div class="marker-info">
+                            <h4>مقر منصة النجاح</h4>
+                            <p>شارع جامعة القاهرة، الجيزة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">هل تحتاج إلى مساعدة فورية؟</h2>
+                <p class="cta-subtitle">اتصل بفريق الدعم على الرقم التالي:</p>
+                <a href="tel:+201234567890" class="cta-phone">+20 123 456 7890</a>
+                <p class="cta-note">متاح من الأحد إلى الخميس، من 9 صباحاً حتى 5 مساءً</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🎯</span>
+                        <span class="logo-text">منصة النجاح</span>
+                    </a>
+                    <p class="footer-description">
+                        منصة تعليمية متكاملة لطلاب الثانوية، نقدم حلولاً تعليمية مبتكرة لتحقيق النجاح الأكاديمي
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="courses.html">الكورسات</a></li>
+                        <li><a href="about.html">عن المنصة</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">الكورسات</h3>
+                    <ul class="footer-links">
+                        <li><a href="courses.html?filter=math">الرياضيات</a></li>
+                        <li><a href="courses.html?filter=physics">الفيزياء</a></li>
+                        <li><a href="courses.html?filter=chemistry">الكيمياء</a></li>
+                        <li><a href="courses.html?filter=biology">الأحياء</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">تواصل معنا</h3>
+                    <ul class="footer-contact">
+                        <li>📧 info@alnajah.com</li>
+                        <li>📞 01234567890</li>
+                        <li>📍 القاهرة، مصر</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© <span id="currentYear">2024</span> منصة النجاح. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
