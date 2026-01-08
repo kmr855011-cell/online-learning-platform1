@@ -6,17 +6,18 @@
     <title>الكورسات - منصة النجاح التعليمية</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/courses.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- شريط التنقل -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <span class="logo-icon">🎯</span>
+                <i class="fas fa-graduation-cap logo-icon"></i>
                 <span class="logo-text">منصة النجاح</span>
             </a>
             
@@ -28,41 +29,113 @@
             
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">الرئيسية</a></li>
-                <li><a href="Courses.html" class="nav-link active">الكورسات</a></li>
+                <li><a href="courses.html" class="nav-link active">الكورسات</a></li>
                 <li><a href="about.html" class="nav-link">عن المنصة</a></li>
                 <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
-                <li><a href="#" class="btn btn-primary nav-cta">سجل الآن</a></li>
+                <li><a href="dashboard.html" class="nav-link">لوحة التحكم</a></li>
+                <li><a href="contact.html#register" class="btn btn-primary nav-cta">سجل الآن</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Courses Header -->
-    <section class="courses-header">
+    <!-- Hero Section -->
+    <section class="courses-hero">
         <div class="container">
-            <div class="courses-header-content">
-                <h1 class="courses-title">الكورسات التعليمية</h1>
-                <p class="courses-subtitle">
-                    اختر من مجموعة متنوعة من الكورسات المصممة خصيصًا لطلاب الثانوية
-                </p>
+            <div class="hero-content">
+                <h1 class="hero-title">اكتشف كورساتنا التعليمية</h1>
+                <p class="hero-subtitle">دورات تعليمية متخصصة لطلاب الثانوية العامة، مصممة بأفضل الأساليب التعليمية</p>
                 
-                <!-- Search and Filter -->
-                <div class="courses-controls">
-                    <div class="search-box">
-                        <input type="text" id="courseSearch" placeholder="ابحث عن كورس..." class="search-input">
-                        <button class="search-btn" aria-label="بحث">
-                            <span>🔍</span>
-                        </button>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-book-open"></i>
+                        <div>
+                            <span class="stat-number">+50</span>
+                            <span class="stat-label">كورس متاح</span>
+                        </div>
                     </div>
-                    
-                    <div class="filter-dropdown">
-                        <select id="courseFilter" class="filter-select">
-                            <option value="all">جميع التخصصات</option>
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <span class="stat-number">+5,200</span>
+                            <span class="stat-label">طالب مسجل</span>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">نسبة النجاح</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-elements">
+                    <div class="element math"><i class="fas fa-square-root-alt"></i></div>
+                    <div class="element physics"><i class="fas fa-atom"></i></div>
+                    <div class="element chemistry"><i class="fas fa-flask"></i></div>
+                    <div class="element biology"><i class="fas fa-dna"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="courseSearch" class="search-input" placeholder="ابحث عن كورس، مدرس، أو موضوع...">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                        بحث
+                    </button>
+                </div>
+                
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="categoryFilter" class="filter-label">
+                            <i class="fas fa-filter"></i>
+                            التصنيف
+                        </label>
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="all">جميع التصنيفات</option>
                             <option value="math">الرياضيات</option>
                             <option value="physics">الفيزياء</option>
                             <option value="chemistry">الكيمياء</option>
                             <option value="biology">الأحياء</option>
-                            <option value="arabic">العربية</option>
-                            <option value="english">الإنجليزية</option>
+                            <option value="arabic">اللغة العربية</option>
+                            <option value="english">اللغة الإنجليزية</option>
+                            <option value="history">التاريخ</option>
+                            <option value="geography">الجغرافيا</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="levelFilter" class="filter-label">
+                            <i class="fas fa-chart-bar"></i>
+                            المستوى
+                        </label>
+                        <select id="levelFilter" class="filter-select">
+                            <option value="all">جميع المستويات</option>
+                            <option value="beginner">مبتدئ</option>
+                            <option value="intermediate">متوسط</option>
+                            <option value="advanced">متقدم</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sortFilter" class="filter-label">
+                            <i class="fas fa-sort-amount-down"></i>
+                            الترتيب
+                        </label>
+                        <select id="sortFilter" class="filter-select">
+                            <option value="popular">الأكثر شعبية</option>
+                            <option value="newest">الأحدث</option>
+                            <option value="rating">الأعلى تقييماً</option>
+                            <option value="price-low">السعر: من الأقل للأعلى</option>
+                            <option value="price-high">السعر: من الأعلى للأقل</option>
                         </select>
                     </div>
                 </div>
@@ -70,97 +143,274 @@
         </div>
     </section>
 
-    <!-- Courses Main Content -->
-    <main class="courses-main">
+    <!-- Courses Grid Section -->
+    <section class="courses-section">
         <div class="container">
-            <!-- Courses Statistics -->
-            <div class="courses-stats">
-                <div class="stat-card">
-                    <div class="stat-number" id="totalCourses">24</div>
-                    <div class="stat-label">كورس متاح</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="totalHours">480+</div>
-                    <div class="stat-label">ساعة تعليمية</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="totalStudents">5,200+</div>
-                    <div class="stat-label">طالب مسجل</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="successRate">98%</div>
-                    <div class="stat-label">نسبة النجاح</div>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">الكورسات المتاحة</h2>
+                <p class="section-subtitle">اختر من بين مجموعة واسعة من الكورسات التعليمية المتميزة</p>
             </div>
-
-            <!-- Courses Grid -->
-            <div class="courses-container">
-                <div class="courses-grid" id="coursesGrid">
-                    <!-- Courses will be loaded dynamically -->
-                </div>
-                
-                <!-- Loading Indicator -->
-                <div class="loading-indicator" id="loadingIndicator">
+            
+            <div class="courses-grid" id="coursesGrid">
+                <!-- الكورسات سيتم تحميلها ديناميكياً -->
+            </div>
+            
+            <div class="loading-container" id="loadingContainer">
+                <div class="loading-spinner">
                     <div class="spinner"></div>
                     <p>جاري تحميل الكورسات...</p>
                 </div>
-                
-                <!-- No Results Message -->
-                <div class="no-results" id="noResults" style="display: none;">
-                    <p>❌ لم يتم العثور على كورسات تطابق بحثك</p>
-                </div>
             </div>
             
-            <!-- Pagination -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search fa-3x"></i>
+                <h3>لم نجد ما تبحث عنه</h3>
+                <p>حاول استخدام كلمات بحث مختلفة أو تغيير عوامل التصفية</p>
+                <button class="btn btn-secondary" id="clearFiltersBtn">مسح جميع الفلاتر</button>
+            </div>
+            
             <div class="pagination" id="pagination">
-                <!-- Pagination will be generated dynamically -->
+                <!-- Pagination سيتم توليدها ديناميكياً -->
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">التصنيفات الرئيسية</h2>
+                <p class="section-subtitle">استكشف كورساتنا حسب التخصص</p>
+            </div>
+            
+            <div class="categories-grid">
+                <a href="#" class="category-card" data-category="math">
+                    <div class="category-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>الرياضيات</h3>
+                    <p>+15 كورس</p>
+                    <span class="category-link">استعرض الكورسات <i class="fas fa-arrow-left"></i></span>
+                </a>
+                
+                <a href="#" class="category-card" data-category="physics">
+                    <div class="category-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>الفيزياء</h3>
+                    <p>+12 كورس</p>
+                    <span class="category-link">استعرض الكورسات <i class="fas fa-arrow-left"></i></span>
+                </a>
+                
+                <a href="#" class="category-card" data-category="chemistry">
+                    <div class="category-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>الكيمياء</h3>
+                    <p>+10 كورس</p>
+                    <span class="category-link">استعرض الكورسات <i class="fas fa-arrow-left"></i></span>
+                </a>
+                
+                <a href="#" class="category-card" data-category="biology">
+                    <div class="category-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>الأحياء</h3>
+                    <p>+8 كورس</p>
+                    <span class="category-link">استعرض الكورسات <i class="fas fa-arrow-left"></i></span>
+                </a>
+                
+                <a href="#" class="category-card" data-category="arabic">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>اللغة العربية</h3>
+                    <p>+6 كورس</p>
+                    <span class="category-link">استعرض الكورسات <i class="fas fa-arrow-left"></i></span>
+                </a>
+                
+                <a href="#" class="category-card" data-category="english">
+                    <div class="category-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>اللغة الإنجليزية</h3>
+                    <p>+8 كورس</p>
+                    <span class="category-link">استعرض الكورسات <i class="fas fa-arrow-left"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses Section -->
+    <section class="featured-courses">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">الكورسات المميزة</h2>
+                <p class="section-subtitle">الأكثر طلباً وتقييماً من طلابنا</p>
+            </div>
+            
+            <div class="featured-slider">
+                <div class="featured-card">
+                    <div class="featured-badge">
+                        <i class="fas fa-crown"></i>
+                        الأكثر مبيعاً
+                    </div>
+                    <div class="featured-content">
+                        <span class="course-category math">رياضيات</span>
+                        <h3>الرياضيات المتقدمة للثانوية العامة</h3>
+                        <p class="course-description">شرح متكامل لجميع فصول الرياضيات مع تطبيقات عملية وتمارين تفاعلية</p>
+                        
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>30 ساعة</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>1,250 طالب</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (380 تقييم)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="course-instructor">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="المدرس">
+                            <div>
+                                <h4>د. أحمد محمد</h4>
+                                <p>مدرس رياضيات معتمد</p>
+                            </div>
+                        </div>
+                        
+                        <div class="course-price">
+                            <div class="price-info">
+                                <span class="current-price">299 ج.م</span>
+                                <span class="original-price">499 ج.م</span>
+                                <span class="discount">وفر 40%</span>
+                            </div>
+                            <button class="btn btn-primary">اشترك الآن</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="featured-card">
+                    <div class="featured-badge">
+                        <i class="fas fa-fire"></i>
+                        الأكثر تقييماً
+                    </div>
+                    <div class="featured-content">
+                        <span class="course-category physics">فيزياء</span>
+                        <h3>الفيزياء الحديثة - الميكانيكا</h3>
+                        <p class="course-description">فهم أساسيات الميكانيكا والحركة والقوى مع تجارب محاكاة تفاعلية</p>
+                        
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>25 ساعة</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>980 طالب</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.8 (245 تقييم)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="course-instructor">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="المدرس">
+                            <div>
+                                <h4>أ. سامي عبدالرحمن</h4>
+                                <p>خبير فيزياء تعليمية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="course-price">
+                            <div class="price-info">
+                                <span class="current-price">249 ج.م</span>
+                                <span class="original-price">399 ج.م</span>
+                                <span class="discount">وفر 38%</span>
+                            </div>
+                            <button class="btn btn-primary">اشترك الآن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
-            <h2 class="section-title text-center">أسئلة شائعة</h2>
+            <div class="section-header">
+                <h2 class="section-title">أسئلة شائعة</h2>
+                <p class="section-subtitle">إجابات على الأسئلة الأكثر شيوعاً حول الكورسات</p>
+            </div>
             
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>كيف يمكنني الاشتراك في الكورسات؟</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>يمكنك الاشتراك عن طريق التسجيل في الموقع ثم اختيار الكورس المناسب والضغط على زر "اشترك الآن". يمكنك الدفع عبر البطاقات الإلكترونية أو التحويل البنكي.</p>
+            <div class="faq-grid">
+                <div class="faq-column">
+                    <div class="faq-item active">
+                        <div class="faq-question">
+                            <h3>كيف يمكنني التسجيل في الكورسات؟</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>يمكنك التسجيل عن طريق إنشاء حساب في المنصة، ثم اختيار الكورس المناسب والضغط على زر "اشترك الآن". ستتمكن من الدفع عبر بطاقات الائتمان أو التحويل البنكي أو محافظ الدفع الإلكترونية.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>هل يمكنني الحصول على نسخة تجريبية؟</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>نعم، نقدم نسخة تجريبية مجانية لمدة 7 أيام لأي كورس. يمكنك تجربة أول محاضرتين من أي كورس مجاناً قبل الاشتراك.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>ماذا لو لم يعجبني الكورس؟</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>نوفر ضمان استرداد الأموال خلال 14 يوم إذا لم تكن راضيًا عن الكورس لأي سبب. فقط تواصل مع فريق الدعم.</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>هل يمكنني الوصول للكورسات على الهاتف؟</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>نعم، جميع الكورسات متاحة عبر تطبيق الهاتف والموقع الإلكتروني، ويمكنك المذاكرة في أي وقت ومن أي مكان.</p>
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>هل هناك شهادة معتمدة بعد الانتهاء؟</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>نعم، تحصل على شهادة إلكترونية معتمدة من المنصة بعد إكمال كل كورس بنجاح. يمكنك مشاركتها على لينكدإن والسيرة الذاتية.</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>ماذا لو لم يعجبني الكورس؟</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>نوفر ضمان استرداد الأموال خلال 7 أيام إذا لم تكن راضيًا عن الكورس لأي سبب.</p>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>كم مدة الوصول للكورس بعد الشراء؟</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>تحصل على وصول دائم لمحتوى الكورس بعد الشراء. يمكنك الوصول للدروس في أي وقت ومن أي جهاز.</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>هل هناك شهادة معتمدة بعد الانتهاء؟</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>نعم، تحصل على شهادة إلكترونية معتمدة من المنصة بعد إكمال كل كورس بنجاح.</p>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>هل يمكنني التواصل مع المدرسين؟</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>نعم، يوجد نظام للأسئلة والأجوبة داخل كل كورس، كما يمكنك التواصل مع المدرسين عبر الجلسات الحية الأسبوعية.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,8 +422,17 @@
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">جاهز لبدء رحلتك التعليمية؟</h2>
-                <p class="cta-subtitle">سجل الآن واحصل على أسبوع مجاني من جميع الكورسات</p>
-                <a href="#" class="btn btn-primary btn-large">سجل مجاناً الآن</a>
+                <p class="cta-subtitle">انضم إلى آلاف الطلاب الناجحين وابدأ التعلم اليوم</p>
+                <div class="cta-buttons">
+                    <a href="contact.html#register" class="btn btn-primary btn-large">
+                        <i class="fas fa-user-plus"></i>
+                        سجل مجاناً
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary btn-large">
+                        <i class="fas fa-question-circle"></i>
+                        تواصل معنا
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -184,12 +443,18 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="index.html" class="logo">
-                        <span class="logo-icon">🎯</span>
+                        <i class="fas fa-graduation-cap logo-icon"></i>
                         <span class="logo-text">منصة النجاح</span>
                     </a>
                     <p class="footer-description">
                         منصة تعليمية متكاملة لطلاب الثانوية، نقدم حلولاً تعليمية مبتكرة لتحقيق النجاح الأكاديمي
                     </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="انستجرام"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
                 
                 <div class="footer-col">
@@ -199,27 +464,36 @@
                         <li><a href="courses.html">الكورسات</a></li>
                         <li><a href="about.html">عن المنصة</a></li>
                         <li><a href="contact.html">اتصل بنا</a></li>
+                        <li><a href="dashboard.html">لوحة التحكم</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3 class="footer-title">الكورسات</h3>
+                    <h3 class="footer-title">التصنيفات</h3>
                     <ul class="footer-links">
-                        <li><a href="#" data-filter="math">الرياضيات</a></li>
-                        <li><a href="#" data-filter="physics">الفيزياء</a></li>
-                        <li><a href="#" data-filter="chemistry">الكيمياء</a></li>
-                        <li><a href="#" data-filter="biology">الأحياء</a></li>
-                        <li><a href="#" data-filter="arabic">العربية</a></li>
-                        <li><a href="#" data-filter="english">الإنجليزية</a></li>
+                        <li><a href="#" data-category="math">الرياضيات</a></li>
+                        <li><a href="#" data-category="physics">الفيزياء</a></li>
+                        <li><a href="#" data-category="chemistry">الكيمياء</a></li>
+                        <li><a href="#" data-category="biology">الأحياء</a></li>
+                        <li><a href="#" data-category="arabic">اللغة العربية</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3 class="footer-title">تواصل معنا</h3>
                     <ul class="footer-contact">
-                        <li>📧 info@alnajah.com</li>
-                        <li>📞 01234567890</li>
-                        <li>📍 القاهرة، مصر</li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@alnajah.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>01234567890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>القاهرة، مصر</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -230,17 +504,19 @@
         </div>
     </footer>
 
-    <!-- Course Modal -->
+    <!-- Course Details Modal -->
     <div class="modal" id="courseModal">
         <div class="modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
             <div class="modal-body" id="modalBody">
-                <!-- Course details will be loaded here -->
+                <!-- سيتم تعبئة هذا القسم ديناميكياً -->
             </div>
         </div>
     </div>
 
-    <script src="navigation.js"></script>
-    <script src="courses.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/courses.js"></script>
 </body>
 </html>
